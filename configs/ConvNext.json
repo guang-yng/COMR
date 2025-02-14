@@ -1,0 +1,8 @@
+{
+    "model_type": "convnext",
+    "num_channels": 1, 
+    "num_stages": 4, 
+    "hidden_sizes": [96, 192, 384, 768], 
+    "depths": [3,3,9,3],
+    "image_size": 768
+}

@@ -1,0 +1,33 @@
+{
+    "encoder_config_path": "configs/ConvNext.json",
+    "decoder_config_path": "configs/GPT2.json",
+    "tokenizer_path": "tokenizers/pdmx_v0_tokenizer.json",
+
+    "dataset_path": "datasets/pdmx-v0-clean",
+    "image_width": 768,
+
+    "run_name": "SMT-large",
+    "output_dir": "outputs/SMT-pdmx-large/",
+    "remove_unused_columns": false,
+
+    "do_train": true,
+    "do_eval": false,
+    "dataloader_num_workers": 16,
+    "dataloader_prefetch_factor": 2,
+    "bf16": true,
+    "num_train_epochs": 20,
+    "learning_rate": 1e-3,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 4,
+    "warmup_ratio": 0.03,
+    "logging_steps": 500,
+    "save_strategy": "epoch",
+    "per_device_eval_batch_size": 2,
+    "eval_strategy": "epoch",
+    "eval_delay": 4,
+    "predict_with_generate": true,
+    "generation_max_length": 2048,
+    "generation_num_beams": 3,
+    "report_to": "wandb",
+    "torch_compile": true
+}
